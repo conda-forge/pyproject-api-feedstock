@@ -1,11 +1,11 @@
-About pyproject-api
-===================
+About pyproject-api-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyproject-api-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/pyproject-api
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyproject-api-feedstock/blob/main/LICENSE.txt)
 
 Summary: API to interact with the python pyproject.toml based projects
 
