@@ -21,7 +21,7 @@ requirements:
     - python >=3.7
   run:
     - python >=3.7
-    - packaging >=21.3
+    - packaging >=23
     - tomli >=2.0.1
 
 test:
