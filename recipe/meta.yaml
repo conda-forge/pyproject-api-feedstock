@@ -1,4 +1,4 @@
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: pyproject-api
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyproject-api/pyproject_api-{{ version }}.tar.gz
-  sha256: 435f46547a9ff22cf4208ee274fca3e2869aeb062a4834adfc99a4dd64af3cf9
+  sha256: 999f58fa3c92b23ebd31a6bad5d1f87d456744d75e05391be7f5c729015d3d91
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
