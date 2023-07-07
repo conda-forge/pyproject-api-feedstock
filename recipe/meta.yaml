@@ -1,4 +1,4 @@
-{% set version = "1.5.2" %}
+{% set version = "1.5.3" %}
 
 package:
   name: pyproject-api
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyproject-api/pyproject_api-{{ version }}.tar.gz
-  sha256: 999f58fa3c92b23ebd31a6bad5d1f87d456744d75e05391be7f5c729015d3d91
+  sha256: ffb5b2d7cad43f5b2688ab490de7c4d3f6f15e0b819cb588c4b771567c9729eb
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -16,7 +16,7 @@ build:
 requirements:
   host:
     - hatch-vcs >=0.3
-    - hatchling >=1.12.2
+    - hatchling >=1.17.1
     - pip
     - python >=3.7
   run:
