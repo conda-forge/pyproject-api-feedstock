@@ -1,4 +1,4 @@
-{% set version = "1.7.1" %}
+{% set version = "1.7.2" %}
 
 package:
   name: pyproject-api
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyproject-api/pyproject_api-{{ version }}.tar.gz
-  sha256: 7ebc6cd10710f89f4cf2a2731710a98abce37ebff19427116ff2174c9236a827
+  sha256: dc5b0e0f6e291a4f22b46e182c9c6d4915c62b1f089b8de1b73f2d06ae453593
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
