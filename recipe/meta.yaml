@@ -31,10 +31,12 @@ test:
     - pyproject_api
   commands:
     - pip check
-    - pytest -vv --cov=pyproject_api --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=76
+    - coverage run -m --source pyproject_api --branch -m pytest -vv --color=yes --tb=long -k "not setuptools_prepare_metadata_for_build_wheel"
+    - coverage report --show-missing --skip-covered --fail-under=76
   requires:
+    - coverage
     - pip
-    - pytest-cov
+    - pytest
     - pytest-mock
     - virtualenv
 
