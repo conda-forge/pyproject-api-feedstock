@@ -5,12 +5,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyproject-api/pyproject_api-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/p/pyproject-api/pyproject_api-{{ version }}.tar.gz
   sha256: 77b8049f2feb5d33eefcc21b57f1e279636277a8ac8ad6b5871037b243778496
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -18,9 +18,9 @@ requirements:
     - hatch-vcs >=0.4
     - hatchling >=1.25
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - packaging >=24.1
     - tomli >=2.0.1
 
@@ -39,6 +39,7 @@ test:
     - pytest
     - pytest-mock
     - virtualenv
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/pyproject-api
