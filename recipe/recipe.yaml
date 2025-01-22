@@ -44,6 +44,7 @@ tests:
         - pytest
         - pytest-mock
         - python ${{ python_min }}.*
+        - setuptools
         - virtualenv
     script:
       - coverage run -m --source pyproject_api --branch -m pytest -vv --color=yes --tb=long -k "not setuptools_prepare_metadata_for_build_wheel"
