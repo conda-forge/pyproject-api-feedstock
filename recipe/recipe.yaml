@@ -37,7 +37,7 @@ tests:
         - pyproject_api
   - files:
       source:
-        - tests
+        - tests/
     requirements:
       run:
         - coverage
