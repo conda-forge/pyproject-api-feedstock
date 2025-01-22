@@ -31,6 +31,8 @@ requirements:
 
 tests:
   - python:
+      pip_check: true
+      python_version: ${{ python_min }}.*
       imports:
         - pyproject_api
   - files:
@@ -44,7 +46,6 @@ tests:
         - python ${{ python_min }}.*
         - virtualenv
     script:
-      - pip check
       - coverage run -m --source pyproject_api --branch -m pytest -vv --color=yes --tb=long -k "not setuptools_prepare_metadata_for_build_wheel"
       - coverage report --show-missing --skip-covered --fail-under=76
 
