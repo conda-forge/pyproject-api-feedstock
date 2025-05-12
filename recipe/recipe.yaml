@@ -26,15 +26,16 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
-    - packaging >=24.2
-    - tomli >=2.0.1
+    - packaging >=25
+    - tomli >=2.2.1
 
 tests:
   - python:
+      imports: pyproject_api
       pip_check: true
-      python_version: ${{ python_min }}.*
-      imports:
-        - pyproject_api
+      python_version:
+        - ${{ python_min }}.*
+        - 3.13.*
   - files:
       source:
         - tests/
