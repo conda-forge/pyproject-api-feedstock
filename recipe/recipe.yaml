@@ -20,14 +20,14 @@ build:
 
 requirements:
   host:
-    - hatch-vcs >=0.4
+    - hatch-vcs >=0.5
     - hatchling >=1.27
     - pip
     - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
     - packaging >=25
-    - tomli >=2.2.1
+    - tomli >=2.3
 
 tests:
   - python:
@@ -35,7 +35,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - 3.14.*
   - files:
       source:
         - tests/
