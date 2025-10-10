@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.9.1"
+  version: "1.10.0"
 
 package:
   name: pyproject-api
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyproject-api/pyproject_api-${{ version }}.tar.gz
-  sha256: 43c9918f49daab37e302038fc1aed54a8c7a91a9fa935d00b9a485f37e0f5335
+  sha256: 40c6f2d82eebdc4afee61c773ed208c04c19db4c4a60d97f8d7be3ebc0bbb330
 
 build:
   number: 0
@@ -20,14 +20,14 @@ build:
 
 requirements:
   host:
-    - hatch-vcs >=0.4
+    - hatch-vcs >=0.5
     - hatchling >=1.27
     - pip
     - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
     - packaging >=25
-    - tomli >=2.2.1
+    - tomli >=2.3
 
 tests:
   - python:
@@ -35,7 +35,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - 3.13.*
+        - 3.14.*
   - files:
       source:
         - tests/
