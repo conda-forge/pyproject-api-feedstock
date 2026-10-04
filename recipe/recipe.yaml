@@ -22,14 +22,21 @@ build:
 requirements:
   host:
     - hatch-vcs >=0.5
-    - hatchling >=1.28
+    - hatchling >=1.32.4
     - pip
     - python ${{ python_min }}.*
   run:
+    - packaging >=26
     - python >=${{ python_min }}
-    - packaging >=25
 
 tests:
+  - package_contents:
+      strict: true
+      files:
+        - etc/conda/test-files/pyproject-api/**
+      site_packages:
+        - pyproject_api/**
+        - pyproject_api-${{ version }}.dist-info/**
   - python:
       imports: pyproject_api
       pip_check: true
