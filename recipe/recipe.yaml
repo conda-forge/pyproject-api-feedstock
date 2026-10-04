@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.11.2"
+  version: "1.11.3"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pyproject-api/pyproject_api-${{ version }}.tar.gz
-  sha256: 7bff8690a101f5f0bac3221475d214018f196ae5eea3af9c9879f4d682a3fd60
+  sha256: 4ca2f09f628d86ae019d7c701ebb65ee667efc28261f8b9ee3bd55bf0985712c
 
 build:
   number: 0
