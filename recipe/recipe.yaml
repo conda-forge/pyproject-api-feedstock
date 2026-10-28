@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.12.0"
+  version: "1.12.1"
   python_check_max: "3.15"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pyproject-api/pyproject_api-${{ version }}.tar.gz
-  sha256: 2e83226079dc446a8e2357def7622c01c733284e39afc8e332d9f722fe0c2beb
+  sha256: 1429612586cd1147a00a6eaddfff731ab1c4eee3bf17b4f234dbd4668540e600
 
 build:
   number: 0
@@ -21,6 +21,7 @@ build:
 
 requirements:
   host:
+    - hatch-fancy-pypi-readme >=25.1
     - hatch-vcs >=0.5
     - hatchling >=1.32.4
     - pip
