@@ -26,6 +26,7 @@ requirements:
     - hatchling >=1.32.4
     - pip
     - python ${{ python_min }}.*
+    - python-sbom >=0.1.2
   run:
     - packaging >=26.3
     - python >=${{ python_min }}
